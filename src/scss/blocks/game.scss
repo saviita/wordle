@@ -8,9 +8,14 @@
         display: flex;
         gap: 1rem;
     }
+
     &__letter {
         width: 3.5rem;
         height: 3.5rem;
         border: 1px solid white;
+        padding: 0.5rem;
+        font-size: 2rem;
+        text-align: center;
+        color: white;
     }
 }
