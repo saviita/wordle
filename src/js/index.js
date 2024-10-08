@@ -40,7 +40,7 @@ const randomPosition = () => {
 }
 randomPosition()
 
-const paintLetter = (letter, position, className) {
+const paintLetter = (letter, position, className) => {
     const letterBox = gameBoradElement.children[currentRow].children[i]
     letterBox.textContent = letter
 
