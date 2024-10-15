@@ -1,10 +1,12 @@
 .solution {
-    &__input {
-        text-align: center;
-        background-color: transparent;
-        border: none;
-        padding: 10px;
-        border-bottom: 1px solid white;
-        color: white;
-    }
+  color: beige;
+  font-size: 30px;
+  &__input {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    color: white;
+  }
 }
