@@ -5,6 +5,9 @@
     <!-- PON UN FAVICON!!! -->
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet" />
     <!-- CAMBIA EL TITLE!!! -->
     <title>Vite Template</title>
   </head>
@@ -13,10 +16,11 @@
       <h1 class="title">WORDLE</h1>
       <div class="game" id="gameboard"></div>
       <form id="form" class="solution">
-        <input type="text" name="" id="input" class="solution__input" placeholder="Type your solution">
+        <input type="text" name="" id="input" class="solution__input" placeholder="Type your solution" />
+        <h2 id="error"></h2>
       </form>
     </main>
-    
+
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

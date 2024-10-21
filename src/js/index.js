@@ -4,6 +4,7 @@ import '../scss/styles.scss';
 const formElement = document.getElementById('form');
 const inputElement = document.getElementById('input');
 const gameBoradElement = document.getElementById('gameboard');
+const errorElement = document.getElementById('error');
 const rootStyles = document.documentElement.style;
 const WORDS = ['rojo', 'casa', 'flores', 'botas', 'ojo', 'pez'];
 const TRIESNUMBER = 5;
@@ -71,6 +72,9 @@ const checkRow = userWord => {
   checkWinner(userWord);
 
   if (correctWord) {
+    console.log(secretWord, correctWord);
+    inputElement.remove();
+    formElement.textContent = '¡Has acertado!';
     return;
   }
 
@@ -87,14 +91,13 @@ const checkRow = userWord => {
     }
   }
 
+  inputElement.value = '';
   //   secretWord === userWord ? (correctWord = true) : (correctWord = false);
   currentRow++;
 };
 
 const checkWinner = userWord => {
   correctWord = secretWord === userWord;
-  inputElement.remove();
-  formElement.textContent = '¡Has acertado!';
 };
 
 const getWord = event => {
@@ -102,8 +105,10 @@ const getWord = event => {
   const userWord = inputElement.value;
 
   if (userWord.length !== secretWord.length) {
-    console.log(`La palabra tiene que tener ${secretWord.length} letras`);
+    errorElement.textContent = `La palabra tiene que tener ${secretWord.length} letras`;
+    return;
   }
+  errorElement.textContent = '';
 
   checkRow(userWord);
   event.target.reset();

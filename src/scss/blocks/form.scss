@@ -1,12 +1,14 @@
 .solution {
-  color: beige;
-  font-size: 30px;
+  color: #fffcee;
+  font-size: 64px;
+  text-align: center;
+
   &__input {
     text-align: center;
     background-color: transparent;
     border: none;
     padding: 10px;
-    border-bottom: 1px solid white;
-    color: white;
+    border-bottom: 1px solid #fffcee;
+    color: #fffcee;
   }
 }
